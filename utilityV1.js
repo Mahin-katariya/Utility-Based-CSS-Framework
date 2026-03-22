@@ -53,6 +53,7 @@ const openStyles = {
     "m-8": { property: "margin", value: "64px" },
     "m-10": { property: "margin", value: "80px" },
     "m-12": { property: "margin", value: "96px" },
+    "m-auto": {property: "margin", value: "auto"},
 
     // Directional Margins (Top, Bottom, Left, Right)
     "mt-2": { property: "margin-top", value: "16px" },
@@ -60,10 +61,10 @@ const openStyles = {
     "ml-2": { property: "margin-left", value: "16px" },
     "mr-2": { property: "margin-right", value: "16px" },
     "mt-4": { property: "margin-top", value: "32px" },
+    "mt-10": { property: "margin-top", value: "80px" },
     "mb-4": { property: "margin-bottom", value: "32px" },
     "ml-4": { property: "margin-left", value: "32px" },
     "mr-4": { property: "margin-right", value: "32px" },
-
     // 3. SPACING (Padding)
     "p-0": { property: "padding", value: "0px" },
     "p-1": { property: "padding", value: "8px" },
@@ -116,6 +117,41 @@ const openStyles = {
     "border-dashed": { property: "border-style", value: "dashed" },
     "border-dotted": { property: "border-style", value: "dotted" },
     "border-none": { property: "border-style", value: "none" },
+
+    // Border Colors
+    "border-transparent": { property: "border-color", value: "transparent" },
+    "border-white": { property: "border-color", value: "#ffffff" },
+    "border-black": { property: "border-color", value: "#000000" },
+
+    // Semantic / Grayscale (Great for minimalistic borders)
+    "border-light": { property: "border-color", value: "#e5e7eb" },
+    "border-gray-subtle": { property: "border-color", value: "#d1d5db" },
+    "border-dark-subtle": { property: "border-color", value: "#27272a" },
+
+    // Core Theme
+    "border-chai": { property: "border-color", value: "#c57e3c" },
+    "border-beige": { property: "border-color", value: "#f5f5dc" },
+    "border-earthy": { property: "border-color", value: "#8b5a2b" },
+    "border-darkbrown": { property: "border-color", value: "#3e2723" },
+
+    // Modern Rainbow Palette
+    "border-slate": { property: "border-color", value: "#64748b" },
+    "border-gray": { property: "border-color", value: "#6b7280" },
+    "border-zinc": { property: "border-color", value: "#71717a" },
+    "border-red": { property: "border-color", value: "#ef4444" },
+    "border-orange": { property: "border-color", value: "#f97316" },
+    "border-amber": { property: "border-color", value: "#f59e0b" },
+    "border-yellow": { property: "border-color", value: "#eab308" },
+    "border-green": { property: "border-color", value: "#22c55e" },
+    "border-emerald": { property: "border-color", value: "#10b981" },
+    "border-teal": { property: "border-color", value: "#14b8a6" },
+    "border-cyan": { property: "border-color", value: "#06b6d4" },
+    "border-blue": { property: "border-color", value: "#3b82f6" },
+    "border-indigo": { property: "border-color", value: "#6366f1" },
+    "border-violet": { property: "border-color", value: "#8b5cf6" },
+    "border-purple": { property: "border-color", value: "#a855f7" },
+    "border-pink": { property: "border-color", value: "#ec4899" },
+    "border-rose": { property: "border-color", value: "#f43f5e" },
 
     // Border Widths
     "border-0": { property: "border-width", value: "0px" },
@@ -194,7 +230,135 @@ const openStyles = {
     "text-violet": { property: "color", value: "#8b5cf6" },
     "text-purple": { property: "color", value: "#a855f7" },
     "text-pink": { property: "color", value: "#ec4899" },
-    "text-rose": { property: "color", value: "#f43f5e" }
+    "text-rose": { property: "color", value: "#f43f5e" },
+
+    "static": { property: "position", value: "static" },
+    "relative": { property: "position", value: "relative" },
+    "absolute": { property: "position", value: "absolute" },
+    "fixed": { property: "position", value: "fixed" },
+    "sticky": { property: "position", value: "sticky" },
+
+    // 15. PLACEMENT (Top, Right, Bottom, Left for absolute/fixed elements)
+    "top-0": { property: "top", value: "0px" },
+    "right-0": { property: "right", value: "0px" },
+    "bottom-0": { property: "bottom", value: "0px" },
+    "left-0": { property: "left", value: "0px" },
+    "inset-0": { property: "inset", value: "0px" }, // Shorthand for all 4 sides
+
+    // 16. Z-INDEX (Depth & Layering)
+    "z-0": { property: "z-index", value: "0" },
+    "z-10": { property: "z-index", value: "10" },
+    "z-20": { property: "z-index", value: "20" },
+    "z-30": { property: "z-index", value: "30" },
+    "z-40": { property: "z-index", value: "40" },
+    "z-50": { property: "z-index", value: "50" },
+    "z-auto": { property: "z-index", value: "auto" },
+
+    // 17. VIEWPORT & ADVANCED SIZING
+    "w-auto": { property: "width", value: "auto" },
+    "w-screen": { property: "width", value: "100vw" },
+    "w-half": { property: "width", value: "50%" },
+    "h-auto": { property: "height", value: "auto" },
+    "h-screen": { property: "height", value: "100vh" },
+    "h-half": { property: "height", value: "50%" },
+
+    // 18. MIN & MAX CONSTRAINTS
+    "max-w-full": { property: "max-width", value: "100%" },
+    "max-w-screen": { property: "max-width", value: "100vw" },
+    "min-h-full": { property: "min-height", value: "100%" },
+    "min-h-screen": { property: "min-height", value: "100vh" },
+
+    // 19. OVERFLOW HANDLING (Scrollbars & clipping)
+    "overflow-auto": { property: "overflow", value: "auto" },
+    "overflow-hidden": { property: "overflow", value: "hidden" },
+    "overflow-visible": { property: "overflow", value: "visible" },
+    "overflow-scroll": { property: "overflow", value: "scroll" },
+    "overflow-x-auto": { property: "overflow-x", value: "auto" },
+    "overflow-y-auto": { property: "overflow-y", value: "auto" },
+
+    // 20. FLEXBOX CHILDREN BEHAVIORS (Growing & Shrinking)
+    "flex-1": { property: "flex", value: "1 1 0%" },
+    "flex-auto": { property: "flex", value: "1 1 auto" },
+    "flex-none": { property: "flex", value: "none" },
+    "grow": { property: "flex-grow", value: "1" },
+    "grow-0": { property: "flex-grow", value: "0" },
+    "shrink": { property: "flex-shrink", value: "1" },
+    "shrink-0": { property: "flex-shrink", value: "0" },
+
+    // 21. TEXT STYLING & DECORATION
+    "italic": { property: "font-style", value: "italic" },
+    "not-italic": { property: "font-style", value: "normal" },
+    "underline": { property: "text-decoration-line", value: "underline" },
+    "no-underline": { property: "text-decoration-line", value: "none" },
+    "uppercase": { property: "text-transform", value: "uppercase" },
+    "lowercase": { property: "text-transform", value: "lowercase" },
+    "capitalize": { property: "text-transform", value: "capitalize" },
+    "whitespace-normal": { property: "white-space", value: "normal" },
+    "whitespace-nowrap": { property: "white-space", value: "nowrap" },
+
+    // 22. OPACITY SCALE (Completing the 50% you already had)
+    "opacity-0": { property: "opacity", value: "0" },
+    "opacity-25": { property: "opacity", value: "0.25" },
+    "opacity-75": { property: "opacity", value: "0.75" },
+    "opacity-100": { property: "opacity", value: "1" },
+
+    // 23. OBJECT FIT (Crucial for Images and Videos)
+    "object-contain": { property: "object-fit", value: "contain" },
+    "object-cover": { property: "object-fit", value: "cover" },
+    "object-fill": { property: "object-fit", value: "fill" },
+    "object-none": { property: "object-fit", value: "none" },
+
+    "bg-dark-base": { property: "background-color", value: "#0a0a0a" }, // Deepest black-gray for the main body
+    "bg-dark-surface": { property: "background-color", value: "#171717" }, // Slightly lighter for cards/sections
+
+    // Text Colors
+    "text-dark-primary": { property: "color", value: "#ededed" }, // Off-white for high readability without eye strain
+    "text-dark-secondary": { property: "color", value: "#a1a1aa" }, // Muted gray for subtitles/descriptions
+    "text-dark-invert": { property: "color", value: "#0a0a0a" }, // Dark text for light buttons
+
+    // Borders & Accents
+    "border-dark-subtle": { property: "border-color", value: "#27272a" }, // Barely visible borders for structure
+    "bg-dark-primary": { property: "background-color", value: "#ededed" },
+
+    // --- MISSING STYLES FOR THE LANDING PAGE ---
+
+    // Font Weights
+    "font-normal": { property: "font-weight", value: "400" },
+    "font-medium": { property: "font-weight", value: "500" },
+    "font-bold": { property: "font-weight", value: "700" },
+
+    // Line Heights
+    "leading-tight": { property: "line-height", value: "1.25" },
+    "leading-relaxed": { property: "line-height", value: "1.625" },
+
+    // Widths
+    "w-full": { property: "width", value: "100%" },
+
+    // Interactivity
+    "cursor-pointer": { property: "cursor", value: "pointer" },
+    "transition-all": { property: "transition", value: "all 0.2s ease-in-out" },
+
+    // Shadows
+    "shadow-md": { property: "box-shadow", value: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" },
+
+    // Axis Padding (Horizontal & Vertical)
+    "px-3": { property: "padding", value: "0 24px" },
+    "py-1": { property: "padding", value: "8px 0" },
+    "px-4": { property: "padding", value: "0 32px" },
+    "py-2": { property: "padding", value: "16px 0" },
+
+    // Text Decorations
+    "no-underline": { property: "text-decoration-line", value: "none" }, // Removes underlines/decorations
+    "underline": { property: "text-decoration-line", value: "underline" },
+    "line-through": { property: "text-decoration-line", value: "line-through" }, // For strikethroughs
+    "overline": { property: "text-decoration-line", value: "overline" },
+
+    // Text Decoration Styles (Optional but good to have)
+    "decoration-solid": { property: "text-decoration-style", value: "solid" },
+    "decoration-double": { property: "text-decoration-style", value: "double" },
+    "decoration-dotted": { property: "text-decoration-style", value: "dotted" },
+    "decoration-dashed": { property: "text-decoration-style", value: "dashed" },
+    "decoration-wavy": { property: "text-decoration-style", value: "wavy" },
 };
 
 function paintWebpage(){
